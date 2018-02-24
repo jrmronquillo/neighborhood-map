@@ -1,0 +1,134 @@
+html,
+      body {
+        font-family: Arial, sans-serif;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        height: 50%;
+        position: relative;
+      }
+      input {
+        font-size: 12px;
+      }
+      h1 {
+        color: #CD8E9B;
+        font-family: 'Pacifico', cursive;
+        margin: 0 0 10px 0;
+        text-align: center;
+        font-size: 1.5em;
+      }
+      h2{
+        color: #CD8E9B;
+        font-family: 'Pacifico', cursive;
+      }
+      h3{
+        color: #667081;
+      }
+      h4{
+        color: #90A1B7;
+      }
+      p{
+        color: #667081;
+      }
+      hr {
+        background: #D0D7D9;
+        height: 1px;
+        margin: 20px 0 20px 0;
+        border: none;
+      }
+      li{
+        color: #FFB99B;
+        text-decoration: underline;
+      }
+      #foursquare-checkin-data, #foursquare-address-data{
+        color: #667081;
+      }
+      #map {
+        bottom:0px;
+        height: 100%;
+        left: 0px;
+        position: absolute;
+        right: 0px;
+      }
+      .options-box {
+       position: absolute;
+       padding-top: 5px;
+       padding-right: 5px;
+       padding-left: 5px;
+       width: 25%;
+       font-family: sans-serif;
+       background-color: #FFF;
+       opacity: 0.9;
+
+      }
+      #pano {
+        width: 200px;
+        height: 200px;
+      }
+      .text {
+        font-size: 12px;
+      }
+      #searchbox{
+        width: 95%;
+        left: 50%;
+        top: 20px;
+      }
+
+      #infoWindow-title{
+        size:20px;
+      }
+      #foursquare-error{
+        color: red;
+      }
+
+      #map-error{
+        text-align: center;
+        position: relative;
+      }
+
+      #signature{
+        color: #90A1B7;
+        font-size: 0.5em;
+        text-align: right;
+      }
+
+
+      @media only screen and (max-width: 999px) {
+        #map {
+          bottom:0px;
+          height: 100%;
+          left: 0px;
+          position: absolute;
+          right: 0px;
+        }
+        h1{
+        color: #CD8E9B;
+        font-family: 'Pacifico', cursive;
+        margin: 0 0 10px 0;
+        text-align: center;
+        font-size: 1.1em;
+        }
+
+      #current-place, #location-infoz{
+
+        display: none;
+      }
+
+      .options-box{
+       position: absolute;
+       padding-top: 5px;
+       padding-right: 5px;
+       padding-left: 5px;
+       padding-bottom: 5px;
+       left: 10%;
+       width: 75%;
+       bottom: 10px;
+       font-family: sans-serif;
+       background-color: #fff;
+       opacity: 0.9;
+      }
+
+
+    }

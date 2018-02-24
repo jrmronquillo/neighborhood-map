@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8">
+      <link rel="stylesheet" href="css/styles.css">
+      <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+   <body>
+      <main>
+         <div id="map">
+            <div id="map-error"></div>
+         </div>
+      </main>
+      <div id="options-box" class="options-box">
+         <header>
+            <h1 data-bind="event: { click: toggleListView }">&#9776 Best Gelato In Rome</h1>
+         </header>
+         <aside>
+            <div id="filtered-items" data-bind="visible: toggleState">
+               <hr>
+               <div class="filter_search_box">
+                  <input id="searchbox" placeholder="Search..." type="text" data-bind="value: searchinput, valueUpdate: 'afterkeydown'"/>
+               </div>
+               <div id="no-matches" data-bind="ifnot: filteredItems">
+                  <p>No Matches</p>
+               </div>
+               <ul data-bind='foreach: filteredItems'>
+                  <li data-bind="text: title, event: {mouseover:
+                     $parent.setPlaceMouseOver, mouseout:
+                     $parent.setPlaceMouseOut}, click: $parent.setPlace"></li>
+               </ul>
+               <div id='foursquare-error' data-bind='text: fsError'></div>
+               <div id="current-place">
+                  <hr>
+                  <h3>Place Details:</h3>
+                  <h2 data-bind="text: currentPlace().title"></h2>
+                  <h4>Foursquare checkins:</h4>
+                  <h4 data-bind="text: currentPlace().checkins"></h4>
+                  <div data-bind="ifnot: currentPlace().checkins">
+                     <p>FourSquare data did not load</p>
+                  </div>
+                  <h4> Address: </h4>
+                  <h4 data-bind="text: currentPlace().address"></h4>
+                  <div data-bind="ifnot: currentPlace().checkins">
+                     <p>FourSquare data did not load</p>
+                  </div>
+                  <hr>
+                  <div id="signature">Location Data Provided by Foursquare; App Created By: Jerome Ronquillo</div>
+               </div>
+            </div>
+         </aside>
+      </div>
+      <script src="js/lib/jquery.min.js"></script>
+      <script src="js/lib/knockout-3.4.2.debug.js"></script>
+      <script src="js/app.js"></script>
+      <script async defer src="https://maps.googleapis.com/maps/api/js?libraries=geometry,drawing&key=AIzaSyAvhwi95b2DT9obV-F4hUF_tFxDNi9FDg0&v=3&callback=initMap" onerror="err()"></script>
+   </body>
+</html>

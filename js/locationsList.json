@@ -1,0 +1,27 @@
+{"locationsList": [
+    {
+        "title": "Venchi Cioccogelateriaz",
+        "location": {"lat": 41.906238, "lng": 12.480107}
+    },
+    {
+        "title": "Wonderful Ice Cream",
+        "location": {"lat": 41.900909, "lng": 12.493751}
+    },
+    {
+        "title": "Verde Pistachio",
+        "location": {"lat": 41.901343, "lng": 12.493903}
+    },
+    {
+        "title": "Freddo",
+        "location": {"lat": 41.880268, "lng": 12.508817}
+    },
+    {
+        "title": "Sweety Gelato Roma",
+        "location": {"lat": 41.895617, "lng": 12.472944}
+    },
+    {
+        "title": "Vale Gelato",
+        "location": {"lat": 41.895790, "lng": 12.478905}
+    }
+    ]
+}
